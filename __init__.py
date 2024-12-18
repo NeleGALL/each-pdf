@@ -1,6 +1,6 @@
 from sphinx.application import Sphinx
 from sphinx.util.logging import getLogger
-from .each_pdf import CustomBuilder
+from .sphinx_each_pdf import CustomBuilder
 
 logger = getLogger(__name__)
 

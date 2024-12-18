@@ -32,7 +32,7 @@ class CustomBuilder(Builder):
                     print(f"Ошибка при обработке задачи: {e}")
 
     def run_script(self, source_html_path, output_pdf_path, file, build_dir):
-        command = [sys.executable, str(Path(__file__).parent) + '/convert.py', source_html_path, output_pdf_path, str(self.env.app.builder.srcdir) + "/each-pdf.css"]
+        command = [sys.executable, str(Path(__file__).parent) + '/convert.py', source_html_path, output_pdf_path, str(self.env.app.builder.srcdir) + "/sphinx-each-pdf.css"]
         relapth = os.path.relpath(source_html_path, start=build_dir)
         try:
             subprocess.run(command, check=True)
