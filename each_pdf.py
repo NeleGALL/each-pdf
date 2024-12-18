@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 class CustomBuilder(Builder):
-    name = 'each-pdf'
+    name = 'sphinx-each-pdf'
 
     def init(self):
         pass
