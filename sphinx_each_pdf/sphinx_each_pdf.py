@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 class CustomBuilder(Builder):
-    name = 'sphinx-each-pdf'
+    name = 'each-pdf'
 
     def init(self):
         pass
@@ -29,7 +29,7 @@ class CustomBuilder(Builder):
                 try:
                     future.result()
                 except Exception as e:
-                    print(f"Ошибка при обработке задачи: {e}")
+                    print(f"Error: {e}")
 
     def run_script(self, source_html_path, output_pdf_path, file, build_dir):
         command = [sys.executable, str(Path(__file__).parent) + '/convert.py', source_html_path, output_pdf_path, str(self.env.app.builder.srcdir) + "/sphinx-each-pdf.css"]
@@ -38,7 +38,7 @@ class CustomBuilder(Builder):
             subprocess.run(command, check=True)
             print(f'{relapth}')
         except subprocess.CalledProcessError as e:
-            print(f'Ошибка при обработке {file}: {e}')
+            print(f'Error {file}: {e}')
 
     def get_outdated_docs(self):
         return []

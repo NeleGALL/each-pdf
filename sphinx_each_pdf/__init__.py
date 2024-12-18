@@ -11,7 +11,7 @@ def setup(app: Sphinx):
     # Подключение обработчика
     app.connect("html-page-context", add_pdf_link)
 
-    logger.info("Each-PDF подключено.")
+    logger.info("Each-PDF is here!")
     return {
         'version': '1.0',
         'parallel_read_safe': True,

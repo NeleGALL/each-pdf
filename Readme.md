@@ -114,7 +114,7 @@ You can enable the **Sphinx-Each-PDF** extension in Sphinx in one of two ways:
 After adding the extension, run the following Sphinx build command:
 
 ```bash
-sphinx-build -b each-pdf source_dir build_dir
+sphinx-build -b **each-pdf** source_dir build_dir
 ```
 
 Here:
